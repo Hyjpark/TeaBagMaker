@@ -39,20 +39,21 @@
             // 
             // cbTea
             // 
+            this.cbTea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTea.FormattingEnabled = true;
             this.cbTea.Location = new System.Drawing.Point(12, 9);
             this.cbTea.Name = "cbTea";
             this.cbTea.Size = new System.Drawing.Size(121, 20);
             this.cbTea.TabIndex = 0;
+            this.cbTea.SelectedIndexChanged += new System.EventHandler(this.CbTea_SelectedIndexChanged);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Location = new System.Drawing.Point(139, 9);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(41, 12);
+            this.lblTime.Size = new System.Drawing.Size(0, 12);
             this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "시간 : ";
             // 
             // btn
             // 
@@ -62,6 +63,7 @@
             this.btn.TabIndex = 2;
             this.btn.Text = "담그기!";
             this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.Btn_Click);
             // 
             // txtCount
             // 
@@ -97,6 +99,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "차 만들기";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
