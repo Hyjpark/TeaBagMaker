@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbTea = new System.Windows.Forms.ComboBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.btn = new System.Windows.Forms.Button();
-            this.tbCount = new System.Windows.Forms.TextBox();
+            this.txtCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // cbTea
@@ -61,12 +63,12 @@
             this.btn.Text = "담그기!";
             this.btn.UseVisualStyleBackColor = true;
             // 
-            // tbCount
+            // txtCount
             // 
-            this.tbCount.Location = new System.Drawing.Point(12, 113);
-            this.tbCount.Name = "tbCount";
-            this.tbCount.Size = new System.Drawing.Size(166, 21);
-            this.tbCount.TabIndex = 3;
+            this.txtCount.Location = new System.Drawing.Point(12, 113);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.Size = new System.Drawing.Size(166, 21);
+            this.txtCount.TabIndex = 3;
             // 
             // label2
             // 
@@ -77,20 +79,24 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "2019.05.24 3207-박혜정";
             // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 171);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbCount);
+            this.Controls.Add(this.txtCount);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.cbTea);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "티 담그기";
+            this.Text = "차 만들기";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,8 +107,9 @@
         private System.Windows.Forms.ComboBox cbTea;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btn;
-        private System.Windows.Forms.TextBox tbCount;
+        private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer Timer;
     }
 }
 
